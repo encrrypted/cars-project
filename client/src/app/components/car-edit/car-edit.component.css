@@ -1,0 +1,26 @@
+.edit-main{
+ height: 100vh;
+ background: url('https://cdn.visordown.com/field/image/AWD_hero%402.jpg');
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: cover;
+}
+.btns-edit-comp{
+ width: 100px;
+}
+.btns-cont{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ opacity: 0.7;
+}
+input.ng-touched.ng-invalid{
+ border: 2px solid red;
+}
+/* input.ng-touched.ng-valid{
+ border: 4px solid green;
+} */
+.valid{
+ color: red;
+ font-weight: bolder;
+}

@@ -1,0 +1,28 @@
+<div class="details-main">
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="car">
+                <table class="mt-3 table table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">Car Name</th>
+                        <th scope="col">Car Model</th>
+                        <th scope="col">Car Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>{{car.name}}</td>
+                        <td>{{car.model}}</td>
+                        <td>{{car.price}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <img style="width: 700; height: 400;" src={{car.image}} alt="">
+                  <button style="width: 100px; opacity: 0.7;" type="button" class="btn btn-dark" (click)="back()">Back</button>
+            </div>
+        </div>
+    </div>
+    
+</div>

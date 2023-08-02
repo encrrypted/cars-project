@@ -1,0 +1,30 @@
+<div class="main">
+ <form [formGroup]="registerForm" novalidate (ngSubmit)="submit()">
+  <div class="mb-3">
+      <label for="userName" class="form-label">User name</label>
+      <input formControlName="userName" type="text" class="form-control" id="userName">
+      <div *ngIf="f['userName'].invalid && f['userName'].touched">
+          <div class="valid" *ngIf="f['userName'].errors && f['userName'].errors['required']">This field is required</div>
+          <div class="valid" *ngIf="f['userName'].errors && f['userName'].errors['pattern']" >Username must be longer</div>
+      </div>
+  </div>
+     <div class="mb-3">
+         <label for="email" class="form-label">Email address</label>
+         <input formControlName="email" type="email" class="form-control" id="email">
+         <div *ngIf="f['email'].invalid && f['email'].touched">
+             <div class="valid" *ngIf="f['email'].errors && f['email'].errors['required']">This field is required</div>
+             <div class="valid" *ngIf="f['email'].errors && f['email'].errors['email']" >login must be email</div>
+         </div>
+     </div>
+     <div class="mb-3">
+         <label for="password" class="form-label">Password</label>
+         <input formControlName="password" type="password" class="form-control" id="password">
+         <div *ngIf="f['password'].invalid && f['password'].touched">
+             <div class="valid" *ngIf="f['password'].errors && f['password'].errors['required']">This field is required</div>
+             <div class="valid" *ngIf="f['password'].errors && f['password'].errors['pattern']" >Your password is too short</div>
+         </div>
+     </div>
+     <button style="width: 300px;" type="submit" class="btn btn-dark" [disabled]="registerForm.invalid">Register</button>
+    </form>
+    <button style="width: 300px; margin-top: 15px;" type="submit" class="btn btn-dark" (click)="back()">Back</button>
+</div>

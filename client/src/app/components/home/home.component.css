@@ -1,0 +1,19 @@
+.home-main{
+ height: 100vh;
+ background: url('https://www.enterprise.com/content/dam/eu-seo/Tesla-Model-S-3-cropped.jpg');
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: cover; 
+}
+.search-feald{
+ width: 210px;
+}
+.btn-search{
+ width: 210px;
+}
+.table{
+ opacity: 0.7;
+}
+.btn{
+ opacity: 0.7;
+}

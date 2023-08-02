@@ -1,0 +1,28 @@
+<div class="home-main">
+  <div class="container">
+    <div class="row">
+        <div class="col">
+            <input class="form-control search-feald mt-3" name="search" [(ngModel)]="searchText" placeholder="Start type car name">
+            <div class="cars-container">
+                <table class="table table-dark mt-3">
+                    <thead>
+                      <tr>
+                        <th class="text-white" scope="col">Car Name</th>
+                        <th class="text-white" scope="col">Car Model</th>
+                        <th class="text-white" scope="col">Car Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let car of cars | search:searchText">
+                        <td class="text-white">{{car.name}}</td>
+                        <td class="text-white">{{car.model}}</td>
+                        <td class="text-white">{{car.price}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+   </div>  
+</div>
+

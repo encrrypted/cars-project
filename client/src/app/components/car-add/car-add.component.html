@@ -1,0 +1,34 @@
+<div class="add-main">
+ <div class="container">
+  <form [formGroup]="addCarForm" ngForm="addCarForm">
+   <div class="mb-3">
+    <label for="carName" class="form-label mt-3">Car name</label>
+    <input style="opacity: 0.7;" type="text" class="form-control" id="carName" formControlName="carName">
+    <div *ngIf="f['carName'].invalid && f['carName'].touched">
+        <div class="valid" *ngIf="f['carName'].errors && f['carName'].errors['required']">This field is required</div>
+        <div class="valid" *ngIf="f['carName'].errors && f['carName'].errors['pattern']" >Car name is too short</div>
+    </div>
+   </div>
+   <div class="mb-3">
+    <label for="carModel" class="form-label">Car model</label>
+    <input style="opacity: 0.7;" type="text" class="form-control" id="carModel" formControlName="carModel">
+    <div *ngIf="f['carModel'].invalid && f['carModel'].touched">
+        <div class="valid" *ngIf="f['carModel'].errors && f['carModel'].errors['required']">This field is required</div>
+        <div class="valid" *ngIf="f['carModel'].errors && f['carModel'].errors['pattern']">Car model is too short</div>
+    </div>
+   </div>
+   <div class="mb-3">
+    <label for="carPrice" class="form-label">Car price</label>
+    <input style="opacity: 0.7;" type="text" class="form-control" id="carPrice" formControlName="carPrice">
+    <div *ngIf="f['carPrice'].invalid && f['carPrice'].touched">
+        <div class="valid" *ngIf="f['carPrice'].errors && f['carPrice'].errors['required']">This field is required</div>
+        <div class="valid" *ngIf="f['carPrice'].errors && f['carPrice'].errors['pattern']">Price must be number</div>
+        <div class="valid" *ngIf="f['carPrice'].errors && f['carPrice'].errors['min']">Price must be greater then 0</div>
+    </div>
+   </div>
+   <div class="btns-cont">
+    <button style="opacity: 0.7;" type="submit" class="btn btn-dark btns-add-comp" [disabled]="addCarForm.invalid" (click)="addCompiled()">Add car</button>
+    <button style="opacity: 0.7;" type="button" class="btn btn-dark btns-add-comp" (click)="back()">Back</button>
+   </div>
+  </form>
+</div>

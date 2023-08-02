@@ -1,0 +1,15 @@
+.text{
+ width: 1000px;
+ margin: 0 auto;
+ padding: 10px;
+}
+.top-main{
+ height: 100vh;
+ background: url('https://img.freepik.com/free-photo/sport-car-with-black-white-autotuning-driving-forest_114579-4076.jpg?w=2000');
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-size: cover; 
+}
+.table{
+ opacity: 0.7;
+}
